@@ -7,11 +7,11 @@ use Nassau\Turtle\State\TurtleState;
 
 final class TurtleSpy implements Turtle
 {
-    public const TURN_LEFT = 'turn left %d';
-    public const TURN_RIGHT = 'turn right %d';
-    public const MOVE_FORWARD = 'move forward %d';
-    public const PEN_UP = 'pen up';
-    public const PEN_DOWN = 'pen down';
+    public const string TURN_LEFT = 'turn left %d';
+    public const string TURN_RIGHT = 'turn right %d';
+    public const string MOVE_FORWARD = 'move forward %d';
+    public const string PEN_UP = 'pen up';
+    public const string PEN_DOWN = 'pen down';
 
     public array $calls = [];
 

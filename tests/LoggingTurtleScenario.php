@@ -6,18 +6,18 @@ namespace Nassau\Turtle;
 use Nassau\Turtle\State\TurtleState;
 use PHPUnit\Framework\TestCase;
 
-final class LoggingTurtleScenario
+final readonly class LoggingTurtleScenario
 {
-    private readonly TurtleState $state;
-    private readonly TurtleSpy $turtle;
-    private readonly LoggerSpy $logger;
+    private TurtleState $state;
+    private TurtleSpy $turtle;
+    private LoggerSpy $logger;
 
     public static function of(TestCase $testCase): self
     {
         return new self($testCase);
     }
 
-    private function __construct(private readonly TestCase $testCase)
+    private function __construct(private TestCase $testCase)
     {
         $this->turtle = new TurtleSpy();
         $this->logger = new LoggerSpy();
